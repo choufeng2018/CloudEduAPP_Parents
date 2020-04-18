@@ -11,6 +11,7 @@
 				v-for="(tabItem, index) in tabsList"
 			/>
 		</q-tabs>
+		<q-btn label="家长发现" @click="cardActions()" />
 		<div class="filter-by flex justify-start items-center">
 			<div
 				:class="{ 'filter__active': filterItem.isSelected }"
@@ -36,6 +37,10 @@ export default {
 					title: '附近学校',
 					link: '/'
 				}
+				// {
+				// 	title: '添加学生',
+				// 	link: '/homeFind'
+				// }
 			],
 			filterByList: [
 				{
@@ -51,6 +56,13 @@ export default {
 					isSelected: false
 				}
 			]
+		}
+	},
+	methods: {
+		cardActions(type) {
+			this.$router.push({
+				path: '/homeFind'
+			})
 		}
 	}
 }

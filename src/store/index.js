@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import start from './start'
 import user from './user'
+import homeWork from './homeWork'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,8 @@ export default function(/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       start,
-      user
+      user,
+      homeWork
     },
 
     // enable strict mode (adds overhead!)

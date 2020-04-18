@@ -4,10 +4,11 @@ import {
   AUTH_ERROR_MUTATION,
   LOGOUT_MUTATION,
   SAVE_ROLE_ID_MUTATION,
-  IS_EXIST_NICKNAME_MUTATION
+  IS_EXIST_NICKNAME_MUTATION,
+  GETUSERINFO_MUTATION
 } from './mutation-types'
 import { addLocalStore } from '../../assets/uitls/localStore'
-import { ROLE_ID } from '../storeKeys'
+import { ROLE_ID, USER_KEY } from '../storeKeys'
 
 export default {
   [AUTH_REQUEST_MUTATION](state) {
@@ -31,5 +32,8 @@ export default {
   },
   [IS_EXIST_NICKNAME_MUTATION](state, payload) {
     state.isExistNickname = payload
+  },
+  [GETUSERINFO_MUTATION](state, payload) {
+    state.user = payload
   }
 }

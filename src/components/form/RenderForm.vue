@@ -95,6 +95,7 @@ export default {
 			const collectHasError = []
 			values.pop()
 			values.forEach(item => {
+				console.log(this.$refs[item.refName])
 				this.$refs[item.refName][0].validate()
 				collectHasError.push(this.$refs[item.refName][0].hasError)
 			})
